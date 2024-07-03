@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AWANA MAYELA HABIB CERONNE Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Habib-C</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Accueil</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>A propos</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>CV et expérience</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projets</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-third js-fullheight order-md-last img" style="height: 300px; background-image: url(images/bg_main.png);"> 
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Bonjour, Bienvenue sur mon Portfolio !</span>
+			            <h4 class="mb-4 mt-3">Je suis <span>Habib Ceronne AWANA MAYELA</span></h4>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						// 'Data Analyst  ',
+						'MCA Graduate  ',
+						//  'Teacher   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h6>Un Développeur d'application Web & Mobile Certifé</h6>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> -->
+							<p><a href="https://cm.linkedin.com/in/habib-ceronne-awana-mayela-9a4917135" class="btn btn-primary py-3 px-4">LinkedIn</a>  
+							<a href="https://github.com/habibCeronne" class="btn btn-primary py-3 px-4">Mes travaux</a></p> <!-- for white and black buttonbtn btn-white btn-outline-white py-3 px-4-->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/me.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Nom: </span> <span><A>AWANA MAYELA HABIB CERONNE
+
+										</A></span></p>
+										<p><span class="title-s">Rôle de l'emploi: </span> <span>Developpeur Web et Mobile</span></p>
+										<p><span class="title-s">Experience: </span> <span>5 ans</span></p>
+										<p><span class="title-s">Adresse: </span> <span>Essos,Sonel, Yaounde</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">competences</p>
+									<span>Python</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Laravel</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Javascript</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>JEE</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">A propos de moi</h1>
+								<h2 class="mb-4">Biographie</h2>
+								
+								<p>Développeur passionné depuis plus de 05 ans, je recherche la meilleure expérience possible tant pour l’utilisateur que pour le développeur (best practices, tests, TypeScript).
+
+									Ma passion pour la création de solutions logicielles de haute qualités et innovantes m'a permis de développer des compétences solides dans la conception de logiciels, la création des solutions back-end et mobile natives multiplateformes. Mon objectif est d'utiliser mes compétences pour créer des produits fiables et répondant aux besoins des entreprises.</p>
+									
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profil:</span> <span>Développeur Web et Mobile</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Technologie &amp; Marketing Digital</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Ingeeniring en Genie logiciel</span></li>
+									<li class="d-flex"><span>Langage:</span> <span>English, Francais</span></li>
+									<li class="d-flex"><span>Outils BI:</span> <span>Microsoft Power BI, MS Excel, Tableau &amp; Google Looker Studio</span></li>
+									<li class="d-flex"><span>Autres competences:</span> <span>Python, EDA, PostgreSQL, Power BI, MS Excel, Tableau, AWS &amp; Big Data</span></li>
+									<li class="d-flex"><span>Loisirs:</span> <span>Sports, Voyage, Lecture</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projets terminés</span>
+								</p>
+								<p><a href="https://cm.linkedin.com/in/habib-ceronne-awana-mayela-9a4917135" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resumé</h1>
+            <h2 class="mb-4">Résumé</h2>
+            <p>Développeur passionné depuis plus de 05 ans, je recherche la meilleure expérience possible tant pour l’utilisateur que pour le développeur (best practices, tests, TypeScript).</p>
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="cv.doc" class="btn btn-primary py-3 px-3">Télécharger mon CV</a></p>
+				</div>
+			</div>
+          </div>
+        </div>
+
+
+		<div class="row">
+			<h1 class="big-4">Expérience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">SEP 2019 - Présent</span>
+						<h2>Fondateur de l'agence Habisoft</h2>
+						<span class="position">Habisoft</span>
+						<p class="mt-4">Habisoft est une agence web spécialisée dans les différentes formes de communication et de promotion sur le web. Création de sites web, gestion de campagnes publicitaires en ligne, gestion des réseaux sociaux, référencement naturel (SEO) et payant (SEA) ou encore conception graphique.</p>
+						  
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">NOV 2018 - DEC 2020</span>
+						<h2>Developpeur Web et Mobile Android</h2>
+						<span class="position">Eloko SARL</span>
+						<p class="mt-4">Eloko est une plateforme des Jeunes Congolais de la Diaspora qui permet de faciliter les envoies d'argent au Congo via le Mobile avec des frais tres reduits.</p>
+							
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<style>
+			.resume-wrap {
+				height: 100%; /* Adjust this value as needed */
+			}
+		</style>
+		<div class="row">
+			<h1 class="big-4">éducation</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023 - 2024</span>
+    					<h2>Bachelor Of Ingeeniring en Genie Logiciel</h2>
+    					<span class="position">Douala Institute Of Technology</span>
+    					<p class="mt-4">Grade: Bac+3.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021 - 2022</span>
+    					<h2>BTS en Genie Logiciel</h2>
+    					<span class="position">Institut Universitaire des Tropiques</span>
+    					<p class="mt-4">Grade: Bac+2.</p>
+    				</div>
+				</div>
+    		</div>
+
+    	
+    	</div>
+    </section>
+
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projets</h1>
+            <h2 class="mb-4">Projets</h2>
+            <p>Mon objectif est d'utiliser mes compétences pour créer des produits fiables et répondant aux besoins des entreprises.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('images/project1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="  ">Developpement d'une application Mobile Android de paiement de Licence FENASUR - <u>Projet academique</u></a></h3>
+                <p>la FENASUR ambitionne inscrire les arts et sports urbains en général et les danses urbaines en particulier dans des structures afin d'amorcer sa professionnalisation au Cameroun.</p>
+		
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('images/project2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href=" ">Creation d'un site web pour le tourisme en Tanzania - <u>Karibu Lakossa</u></a></h3>
+                <p>Karibu La Kossa est une plateforme web tanzanienne agréée autorisée à organiser des voyages dans toutes les réserves, parcs nationaux et centres touristiques du continent et des îles (Tanganyika et Zanzibar). Explorez le Serengeti, le Ngorongoro, le Tarangire, le lac Manyara et gravissez le mont Meru, Oldonyo le Engai et le Kilimandjaro. Visitez des cascades, des sources et des tribus locales comme les Hadzabe, les Maasai et les Chaga, et découvrez les sculpteurs sur bois Makonde.</p>
+				
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://congoitsolutions.com/" class="block-20 zoom-effect" style="background-image: url('images/project3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://congoitsolutions.com/">Creation d'une application mobile de Covoiturage - <u>CITS</u></a></h3>
+                <p>C.I.T.S propose à des petites et moyennes entreprises, et des grands comptes,des Solutions sur mesure et innovantes pour améliorer leur gestion et accompagner leur développement.</p>
+			
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		
+	  </div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+         
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="7">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+           
+          </div>
+
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>Plus de projets sur<span> Github  </span> </h2>
+						<p><a href="https://github.com/habibCeronne" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<br> 	
+						<div class="heading"> 
+							<h3>Since</h3>
+							<h3><b>"Aucune donnee n'est parfaite, mais la plupart est utilisable,"</b></h3>
+							<h3>J'apprecie resoudre des problemes en programmation.</h3>
+						
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Me contacter</h2>
+            <p>Ci-dessous les coordonnées pour me contacter !</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Adresse</h3>
+	            <p><a href="https://maps.app.goo.gl/BhN64f5Qfa1CvMSz7">Nkolmesseng Yaounde, Cameroun</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Numéro de contact</h3>
+	            <p><a href="tel://652161816">+237 652 16 18 16</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Adresse Email</h3>
+	            <p><a href="mailto:awanamayela@gmail.com">awanamayela@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Télécharger le CV				</h3>
+	            <p><a href="cv.doc">Cliquez ici</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Avez-vous une<span> Question? </span> </h2>
+					<h1>Formulaire de contact</h1>
+					<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+					   <table class="form-style">
+						  <tr>
+							 <td>
+								<label>
+								   Votre nom <span class="required">*</span>
+								</label>
+							 </td>
+							 <td>
+								<input type="text" name="name" class="long"/>
+								<span class="error" id="errorname"></span>
+							 </td>
+						  </tr>
+						  <tr>
+							 <td>
+								<label>
+								   Votre adresse e-mail <span class="required">*</span>
+								</label>
+							 </td>
+							 <td>
+								<input type="email" name="email" class="long"/>
+								<span class="error" id="erroremail"></span>
+							 </td>
+						  </tr>
+						  <tr>
+							 <td>
+								<label>
+								   Message <span class="required">*</span>
+								</label>
+							 </td>
+							 <td>
+								<textarea name="message" class="long field-textarea"></textarea>
+								<span class="error" id="errormsg"></span>
+							 </td>
+						  </tr>
+						  <tr>
+							 <td></td>
+							 <td>
+								<input type="submit" value="Envoyer">      
+								<input type="reset" value="Réinitialiser"> 
+							 </td>
+						  </tr>
+					   </table>
+					</form>
+
+					<script>
+						function validateForm()                                    
+{ 
+    var name = document.forms["myForm"]["name"];               
+    var email = document.forms["myForm"]["email"];    
+    var message = document.forms["myForm"]["message"];   
+   
+    if (name.value == "")                                  
+    { 
+        document.getElementById('errorname').innerHTML="Veuillez entrez un nom valide";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errorname').innerHTML="";  
+    }
+       
+    if (email.value == "")                                   
+    { 
+        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+        email.focus(); 
+        return false; 
+    }else{
+        document.getElementById('erroremail').innerHTML="";  
+    }
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (message.value == "")                           
+    {
+        document.getElementById('errormsg').innerHTML="Veuillez entrez un message valide"; 
+        message.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errormsg').innerHTML="";  
+    }
+   
+    return true; 
+}
+					</script>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Trouvez-moi sur </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://cm.linkedin.com/in/habib-ceronne-awana-mayela-9a4917135"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://github.com/habibCeronne"><span class="icon-github"></span></a></li>  
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | Ce modèle est réalisé par <a href="https://congopro.com/fr/company/habisoft-technologie" target="_blank">Habisoft</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
